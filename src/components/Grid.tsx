@@ -11,7 +11,7 @@ const Grid: React.FC<GridProps> = ({ onClick, disabledNumbers, winningNumbers })
   const numbers = Array.from({ length: 100 }, (_, i) => i + 1);
 
   return (
-    <div className="grid grid-cols-10 gap-2 p-4 bg-white rounded-lg shadow-lg" style={{ gap: '20px' }}>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-10 gap-4 p-4 bg-white rounded-lg shadow-lg">
       {numbers.map((number) => {
         const isDisabled = disabledNumbers.includes(number);
         const isWinningNumber = winningNumbers.includes(number);
@@ -19,7 +19,7 @@ const Grid: React.FC<GridProps> = ({ onClick, disabledNumbers, winningNumbers })
         return (
           <button
             key={number}
-            className={`relative w-20 h-20 text-lg font-bold rounded-lg transition-all ${
+            className={`relative w-full h-20 text-lg font-bold rounded-lg transition-all ${
               isDisabled
                 ? isWinningNumber
                   ? 'bg-white border-none p-0'
@@ -28,7 +28,6 @@ const Grid: React.FC<GridProps> = ({ onClick, disabledNumbers, winningNumbers })
             }`}
             onClick={() => onClick(number)}
             disabled={isDisabled}
-            style={{ margin: '0px' }} // 버튼 내부의 추가 간격 제거
           >
             {isDisabled ? (
               isWinningNumber ? (

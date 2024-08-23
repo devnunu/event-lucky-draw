@@ -55,7 +55,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 pb-10"> {/* 하단 패딩 추가 */}
       <h1 className="text-5xl font-bold mb-8 text-gray-800 pt-10">
         핀다 <span onClick={resetGrid} className="text-blue-600 cursor-pointer hover:underline">행운</span> 뽑기
       </h1>
