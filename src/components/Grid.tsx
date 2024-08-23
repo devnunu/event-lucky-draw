@@ -37,7 +37,7 @@ const Grid: React.FC<GridProps> = ({ onClick, disabledNumbers, winningNumbers })
                     alt="Disabled" 
                     layout="fill" 
                     objectFit="contain" 
-                    className="rounded-lg" 
+                    className="rounded-lg p-2" 
                   />
                 </div>
               ) : null
