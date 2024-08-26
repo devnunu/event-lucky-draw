@@ -8,7 +8,7 @@ interface GridProps {
 }
 
 const Grid: React.FC<GridProps> = ({ onClick, disabledNumbers, winningNumbers }) => {
-  const numbers = Array.from({ length: 100 }, (_, i) => i + 1);
+  const numbers = Array.from({ length: 200 }, (_, i) => i + 1);
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-10 gap-4 p-4 bg-white rounded-lg shadow-lg">

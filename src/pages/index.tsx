@@ -11,7 +11,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const generateWinningNumbers = () => {
-      const numbers = Array.from({ length: 100 }, (_, i) => i + 1); // 숫자를 100개로 제한
+      const numbers = Array.from({ length: 200 }, (_, i) => i + 1); // 숫자를 100개로 제한
       const shuffled = numbers.sort(() => 0.5 - Math.random());
       return shuffled.slice(0, 1); // 당첨 숫자 1개 선택
     };
